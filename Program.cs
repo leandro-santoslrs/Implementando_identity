@@ -5,7 +5,7 @@ using UsuarioApi.Models;
 using UsuarioApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// teste
 // Add services to the container.
 builder.Services.AddDbContext<Contexto>
     (opts =>
@@ -26,12 +26,12 @@ builder.Services.AddScoped<TokenService>();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    // Configurações de senha
-    options.Password.RequireDigit = false; // Não requer número
-    options.Password.RequiredLength = 6; // Tamanho mínimo
-    options.Password.RequireNonAlphanumeric = false; // Não requer caracteres especiais
-    options.Password.RequireUppercase = false; // Não requer letra maiúscula
-    options.Password.RequireLowercase = false; // Não requer letra minúscula
+    // ConfiguraÃ§Ãµes de senha
+    options.Password.RequireDigit = false; // NÃ£o requer nÃºmero
+    options.Password.RequiredLength = 6; // Tamanho mÃ­nimo
+    options.Password.RequireNonAlphanumeric = false; // NÃ£o requer caracteres especiais
+    options.Password.RequireUppercase = false; // NÃ£o requer letra maiÃºscula
+    options.Password.RequireLowercase = false; // NÃ£o requer letra minÃºscula
 });
 
 builder.Services.AddControllers();
